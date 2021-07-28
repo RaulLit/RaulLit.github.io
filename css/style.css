@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --button-color: hsl(250, 80%, 60%);
+    --body-color: hsl(210, 100%, 80%);
+    --nav-background-color: hsl(350, 100%, 75%);
+}
+body{
+    background-color: var(--body-color);
+}
+
+/* NAVBAR */
+.nav-container{
+    background-color: var(--nav-background-color);
+    width: 100%;
+    z-index: 100;
+    position: relative;
+    top: 0;
+}
+.nav-list{
+    list-style: none;
+    padding: 0px 50px;
+    text-align: center;
+    animation: slideRight 0.8s forwards ease-in;
+}
+.nav-items{
+    display: inline-block;
+    padding: 15px;
+    margin: 0px 2vw;
+}
+.nav-items a{
+    padding: 14px 20px;
+    text-decoration: none;
+    background-color: var(--button-color);
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+}
+
+@keyframes slideRight {
+    from {
+        padding-left: 0;
+        opacity: 0;
+    }
+}
+
+/* WORK DROPDOWN */
+.work-dropdown{
+    position: relative;
+}
+.work-dropdown-content{
+    position: absolute;
+    display: none;
+    top: 50px;
+    text-align: left;
+    background-color: var(--button-color);
+    border-radius: 10px;
+    z-index: 10;
+}
+.work-dropdown-content a {
+    display: block;
+    width: 250px;
+}
+.nav-dropdown-show{
+    display: block;
+}
+.work-dropdown:hover .work-dropdown-content{
+    display: block;
+}
+
+/* SIDE NAV */
+.sideNav-container{
+    position: fixed;
+    left: 80px;
+    top: 150px;
+    width: 80px;
+    height: 400px;
+    background-color: var(--nav-background-color);
+    border-radius: 15px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+.sideNav-list{
+    height: 400px;
+    padding: 5px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.sideNav-items{
+    padding: 10px;
+    margin: 10px 0px;
+}
+.sideNav-items a{
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--button-color);
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+.show-sideNav {
+    display: block;
+    opacity: 1;
+}
+
+/* HOME BUTTON HOVER EFFECT */
+.sideNav-home {
+    position: relative;
+}
+.sideNav-home::after {
+    content: 'ome';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 28px;
+    color: white;
+    padding: 15px 15px 14.5px 0px;
+    background-color: var(--button-color);
+    border-radius: 0px 10px 10px 0px;
+    transform: translateX(-28px);
+}
+.sideNav-items:hover .sideNav-home::after{
+    animation: slideIn 0.2s ease-in forwards;
+}
+
+/* WORK BUTTON HOVER EFFECT */
+.sideNav-work {
+    position: relative;
+}
+.sideNav-work::after {
+    content: 'ork';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 30px;
+    color: white;
+    padding: 15px 15px 14px 0px;
+    background-color: var(--button-color);
+    border-radius: 0px 10px 10px 0px;
+    transform: translateX(-30px);
+}
+.sideNav-items:hover .sideNav-work::after{
+    animation: slideIn 0.2s ease-in forwards;
+}
+
+/* GAME BUTTON HOVER EFFECT */
+.sideNav-game {
+    position: relative;
+}
+.sideNav-game::after {
+    content: 'ame';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 28px;
+    color: white;
+    padding: 15px 15px 14px 0px;
+    background-color: var(--button-color);
+    border-radius: 0px 10px 10px 0px;
+    transform: translateX(-30px);
+}
+.sideNav-items:hover .sideNav-game::after{
+    animation: slideIn 0.2s ease-in forwards;
+}
+
+/* QUALIFICATIONS BUTTON HOVER EFFECT */
+.sideNav-qualifications {
+    position: relative;
+}
+.sideNav-qualifications::after {
+    content: 'ualifications';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 28px;
+    color: white;
+    padding: 15px 15px 14px 0px;
+    background-color: var(--button-color);
+    border-radius: 0px 10px 10px 0px;
+    transform: translateX(-30px);
+}
+.sideNav-items:hover .sideNav-qualifications::after{
+    animation: slideIn 0.2s ease-in forwards;
+}
+
+/* CONTACT BUTTON HOVER EFFECT */
+.sideNav-contact {
+    position: relative;
+}
+.sideNav-contact::after {
+    content: 'ontact';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 28px;
+    color: white;
+    padding: 15px 15px 14px 0px;
+    background-color: var(--button-color);
+    border-radius: 0px 10px 10px 0px;
+    transform: translateX(-30px);
+}
+.sideNav-items:hover .sideNav-contact::after{
+    animation: slideIn 0.2s ease-in forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-28px);
+    }
+    50% {
+        opacity: 0.1;
+        transform: translateX();
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* LANDING PAGE */
+.landing-section{
+    width: 100%;
+    height: 720px;
+    padding: 140px;
+    text-align: center;
+    /* line-height: 20vh; */
+    --landing-font-color: hsl(0, 0%, 21%);
+    --landing-font-family: 'Courier New', Courier, monospace;
+    animation: slideDownFadeIn 0.8s forwards ease-in;
+}
+
+.landing-section h1 {
+    font-size: 50px;
+    font-family: var(--landing-font-family);
+    color: var(--landing-font-color);
+    padding-bottom: 100px;
+}
+
+.landing-section h3 {
+    font-size: 35px;
+    font-family: var(--landing-font-family);
+    color: var(--landing-font-color);
+}
+
+@keyframes slideDownFadeIn {
+    from {
+        padding: 0px;
+        opacity: 0;
+    }
+}
+
+.section1 {
+    width: 60vw;
+    height: 70vh;
+    background-color: white;
+    margin: auto;
+}
