@@ -50,10 +50,22 @@
             padding: 20px;
             border-radius: 15px;
             transition: 0.3s ease-in-out;
+            animation: pop 
         }
         .links a:hover{
             background-color: cornflowerblue;
             color: white;
+        }
+        
+        @keyframes pop {
+            50% {
+                background-color: cornflowerblue;
+                color: white;
+            }
+            100% {
+                background-color: none;
+                color: black;
+            }
         }
     </style>
 </head>
@@ -64,6 +76,7 @@
         <h3>Below are some of my websites links, feel free to explore!</h3>
         <div class="links-wrapper">
             <ul class="link-list">
+                <li class="links"><a href="https://raullit.github.io">Portfolio Site</a></li>
                 <li class="links"><a href="https://raullit.github.io/HR-System/">HR-System</a></li>
             </ul>
         </div>
