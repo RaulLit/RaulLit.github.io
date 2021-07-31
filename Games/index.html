@@ -26,7 +26,7 @@
             left: 35vw;
             right: 35vw;
             width: 500px;
-            height: 180px;
+            height: 200px;
             background-color: white;
             text-align: center;
             border-radius: 10px;
@@ -41,6 +41,9 @@
             border-radius: 10px;
             font-size: 20px;
         }
+        #score-model button:hover{
+            box-shadow: 2px grey;
+        }
         #score-model p {
             margin-top: 10px;
             font-size: 18px;
@@ -48,6 +51,13 @@
         #score-model h1 {
             margin-bottom: 0;
             font-size: 30px;
+        }
+        #score-model a{
+            margin: 10px;
+            width: 50%;
+            padding: 15px;
+            color: hsl(350, 100%, 75%);
+            background: hsl(210, 100%, 80%);
         }
     </style>
 </head>
@@ -58,6 +68,7 @@
         <h1 id="big-score">0</h1>
         <p>Score</p>
         <button id="startGameBtn">Start game</button>
+        <a href="https://raullit.github.io">Return Home</a>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
