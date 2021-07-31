@@ -1,1 +1,65 @@
-Hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Game</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+        .score-container{
+            position: fixed;
+            color: white;
+            padding: 20px;
+        }
+        .score-container span {
+            font-size: 24px;
+            user-select: none;
+        }
+        #score-model{
+            position: absolute;
+            top: 30vh;
+            left: 35vw;
+            right: 35vw;
+            width: 500px;
+            height: 180px;
+            background-color: white;
+            text-align: center;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        #score-model button{
+            width: 80%;
+            color: white;
+            background-color: rgb(28, 102, 240);
+            border: none;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        #score-model p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        #score-model h1 {
+            margin-bottom: 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="score-container"><span>Score:&ThickSpace;</span><span id="score-element">0</span></div>
+    <canvas></canvas>
+    <div id="score-model">
+        <h1 id="big-score">0</h1>
+        <p>Score</p>
+        <button id="startGameBtn">Start game</button>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="main.js"></script>
+</html>
