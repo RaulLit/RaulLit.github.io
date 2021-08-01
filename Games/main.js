@@ -192,7 +192,7 @@ function animate () {
                     }));
                 }
 
-                if(enemy.radius - 9 > 9) {
+                if(enemy.radius - 10 > 10) {
                     //Increase score for hit
                     score += 100;
                     scoreEl.innerHTML = score;
