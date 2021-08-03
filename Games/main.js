@@ -1,5 +1,6 @@
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
+var gameOn = true;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -117,25 +118,31 @@ function init() {
 
 //FUNCTIONS
 function spawnEnemies() {
-    setInterval(() => {
-        const radius  = Math.random() * (35-10) + 10;
-        let x;
-        let y;
-        if(Math.random() < 0.5) {
-            x = Math.random() < 0.5? 0 - radius : canvas.width + radius;
-            y = Math.random() * canvas.height;
-        } else {
-            x = Math.random() * canvas.width;
-            y = Math.random() < 0.5? 0 - radius : canvas.height + radius;
+    if(gameOn == false ) {
+        clearInterval(start);
+        return;
+    } else {
+        var start = setInterval(startSpawnEnemies, 1000);
+        function startSpawnEnemies () {
+            const radius  = Math.random() * (35-10) + 10;
+            let x;
+            let y;
+            if(Math.random() < 0.5) {
+                x = Math.random() < 0.5? 0 - radius : canvas.width + radius;
+                y = Math.random() * canvas.height;
+            } else {
+                x = Math.random() * canvas.width;
+                y = Math.random() < 0.5? 0 - radius : canvas.height + radius;
+            }
+            const color = `hsl(${Math.random() * 360}, 50%, 50%)`; // or just use 'hsl('+Math.random() * 360 +', 50%, 50%)';
+            const angle = Math.atan2(canvas.height / 2 - y, canvas.width / 2 - x);  //whenever getting distance between two points, subtract from your destination
+            const velocity = {
+                x: Math.cos(angle),
+                y: Math.sin(angle)
+            }
+            enemies.push(new Enemy(x, y, radius, color, velocity));
         }
-        const color = `hsl(${Math.random() * 360}, 50%, 50%)`; // or just use 'hsl('+Math.random() * 360 +', 50%, 50%)';
-        const angle = Math.atan2(canvas.height / 2 - y, canvas.width / 2 - x);  //whenever getting distance between two points, subtract from your destination
-        const velocity = {
-            x: Math.cos(angle),
-            y: Math.sin(angle)
-        }
-        enemies.push(new Enemy(x, y, radius, color, velocity));
-    }, 1000);
+    }
 }
 
 let animationId;
@@ -174,6 +181,8 @@ function animate () {
         const dist = Math.hypot(player.x - enemy.x, player.y - enemy.y);
         if(dist - enemy.radius - player.radius < 1) {
             cancelAnimationFrame(animationId);
+            gameOn = false;
+            spawnEnemies();
             scoreModel.style.display = 'block';
             bigScore.innerHTML = score;
         }
@@ -192,13 +201,13 @@ function animate () {
                     }));
                 }
 
-                if(enemy.radius - 10 > 10) {
+                if(enemy.radius - 10 > 15) {
                     //Increase score for hit
                     score += 100;
                     scoreEl.innerHTML = score;
 
                     gsap.to(enemy, {
-                        radius: enemy.radius - 10
+                        radius: enemy.radius - 15
                     });
                     setTimeout(() => {
                         projectiles.splice(projectileIndex, 1);
@@ -228,6 +237,7 @@ window.addEventListener('click', (event) => {
 });
 
 startGameBtn.addEventListener('click', () => {
+    // gameOn = true;
     init();
     animate();
     spawnEnemies();
