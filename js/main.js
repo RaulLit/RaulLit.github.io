@@ -5,7 +5,7 @@ if(document.readyState == 'loading') {
 }
 
 function ready() {
-    const navContainer = document.querySelector('.nav-container');
+    const mainNavContainer = document.querySelector('.nav-container');
     const sideNavContainer = document.querySelector('.sideNav-container');
     var sideNavOptions = {
         threshold: 0,
@@ -13,7 +13,6 @@ function ready() {
     };
     const sideNavObserver = new IntersectionObserver(function (entries, sideNavObserver) {
         entries.forEach(entry => {
-            console.log(entry.isIntersecting);
             if(!entry.isIntersecting) {
                 sideNavContainer.classList.add("show-sideNav");
             } else {
@@ -21,16 +20,30 @@ function ready() {
             }
         })
     }, sideNavOptions);
-    sideNavObserver.observe(navContainer);
+    sideNavObserver.observe(mainNavContainer);
 }
 
-// NAV FUNCTIONALITY
-function showNavContent(_content) {
-    var container = document.getElementById(_content);
-    container.classList.toggle('nav-dropdown-show');
+
+// NAV DROPDOWN FUNCTIONALITY
+function dropdownFunction(_dropdownContentContainer) {
+    var container = document.getElementById(_dropdownContentContainer);
+    if(container.classList.contains('show-nav-dropdown')) {
+        hideDropdownContent(_dropdownContentContainer);
+    } else{
+        showDropdownContent(_dropdownContentContainer);
+    }
 }
-function removeDropdownContent(_content){
+function showContent(_content) {
     var container = document.getElementById(_content);
-    container.classList.remove('nav-dropdown-show');
+    container.classList.toggle('show');
+}
+
+function showDropdownContent(_content) {
+    var container = document.getElementById(_content);
+    container.classList.add('show-nav-dropdown');
+}
+function hideDropdownContent(_content){
+    var container = document.getElementById(_content);
+    container.classList.remove('show-nav-dropdown');
 }
 
