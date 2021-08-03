@@ -20,12 +20,15 @@
             font-size: 24px;
             user-select: none;
         }
+        #score-model-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
         #score-model{
             position: absolute;
             top: 30vh;
-            left: 35vw;
-            right: 35vw;
-            width: 500px;
+            width: 450px;
             height: 240px;
             background-color: white;
             text-align: center;
@@ -41,9 +44,6 @@
             border-radius: 10px;
             font-size: 20px;
             margin-bottom: 30px;
-        }
-        #score-model button:hover{
-            box-shadow: 2px grey;
         }
         #score-model p {
             margin-top: 10px;
@@ -62,16 +62,26 @@
             border-radius: 10px;
             font-size: 20px;
         }
+        @media screen and (max-width: 650px) {
+            .score-container span {
+                font-size: 26px;
+            }
+            #score-model{
+                width: 300px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="score-container"><span>Score:&ThickSpace;</span><span id="score-element">0</span></div>
     <canvas></canvas>
-    <div id="score-model">
-        <h1 id="big-score">0</h1>
-        <p>Score</p>
-        <button id="startGameBtn">Start game</button> <br>
-        <a href="https://raullit.github.io">Return Home</a>
+    <div id="score-model-wrapper">
+        <div id="score-model">
+            <h1 id="big-score">0</h1>
+            <p>Score</p>
+            <button id="startGameBtn">Start game</button><br>
+            <a href="#">Return Home</a>
+        </div>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
