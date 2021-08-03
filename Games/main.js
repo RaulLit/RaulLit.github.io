@@ -206,9 +206,8 @@ function animate () {
                     score += 100;
                     scoreEl.innerHTML = score;
 
-                    gsap.to(enemy, {
-                        radius: enemy.radius - 15
-                    });
+                    enemy.radius -= 15;
+                    
                     setTimeout(() => {
                         projectiles.splice(projectileIndex, 1);
                     }, 0);
