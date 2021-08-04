@@ -56,6 +56,9 @@ body{
 .work-dropdown{
     position: relative;
 }
+.work-dropdown>a {
+    cursor: pointer;
+}
 .work-dropdown-content{
     position: absolute;
     display: none;
