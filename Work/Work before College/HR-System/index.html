@@ -1,1 +1,197 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/user-img.png" type="image">
+</head>
+<body>
+    
+    <div class="nav-wrapper">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="symbol">HR System</a></li>
+                <li><a href="index.html">Account</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="employees">
+        <h2>Employees</h2>
+
+        <div class="employee-list">
+            <li>
+                <div class="employee-card" id="employee1">
+                    <img class="user-img" src="img/user-img.png" alt="">
+                    <span>
+                        <div class="employment-details" id="employee1-details">
+                            <span class="name-format">Aditya</span>
+                            <span class="name-format">Raul</span>
+                            <br>
+                            <span>Developer</span>
+                            <br>
+                            <span>Tech Department</span>
+                            <br>
+                            <span>adityaraul9@gmail.com</span>
+                            <br>
+                            <span>Rs. 200000</span>
+                        </div>
+                    </span>
+                    <span class="close-btn" >x</span>
+                </div>
+            </li>
+
+            <li>
+                <div class="employee-card" id="employee2">
+                    <img class="user-img" src="img/user-img.png" alt="">
+                    <span>
+                        <div class="employment-details" id="employee2-details">
+                            <span class="name-format">Rahul</span>
+                            <span class="name-format">Gupta</span>
+                            <br>
+                            <span>CEO</span>
+                            <br>
+                            <span>Head Department</span>
+                            <br>
+                            <span>Rahulgupta@gmail.com</span>
+                            <br>
+                            <span>Rs. 250000</span>
+                        </div>
+                    </span>
+                    <span class="close-btn" >x</span>
+                </div>
+            </li>
+
+            <li>
+                <div class="employee-card" id="employee3">
+                    <img class="user-img" src="img/user-img.png" alt="">
+                    <span>
+                        <div class="employment-details" id="employee3-details">
+                            <span class="name-format">John</span>
+                            <span class="name-format">Wick</span>
+                            <br>
+                            <span>Assassin</span>
+                            <br>
+                            <span>Elimination Department</span>
+                            <br>
+                            <span>johnwick@gmail.com</span>
+                            <br>
+                            <span>Rs. 300000</span>
+                        </div>
+                    </span>
+                    <span class="close-btn" >x</span>
+                </div>
+            </li>
+        </div>
+    </div>
+
+    <div class="interviews">
+        <h2>Upcoming interviews</h2>
+
+        <li>
+            <div class="list-item">
+                <h3>Marketing</h3>
+                <p>Social Media Content Specialist</p>
+                <button class="accept-btn">Accept</button>
+                <button class="reject-btn">Reject</button>
+            </div>
+        </li>
+
+        <li>
+            <div class="list-item">
+                <h3>Driver</h3>
+                <p>Coaching Driver</p>
+                <button class="accept-btn">Accept</button>
+                <button class="reject-btn">Reject</button>
+            </div>
+        </li>
+
+        <li>
+            <div class="list-item">
+                <h3>IT</h3>
+                <p>Back-end Developer</p>
+                <button class="accept-btn">Accept</button>
+                <button class="reject-btn">Reject</button>
+            </div>
+        </li>
+    </div>
+
+    <!-- MODELS -->
+
+    <div class="model" id="employee-model">
+        <div class="model-container">
+            <header class="model-header">
+                <div class="model-header-content">
+                    <span>Add Employee</span>
+                </div>
+            </header>
+            <div class="model-content">
+                <label for="fname">First Name</label>
+                <input type="text" id="name">
+                <br>
+                <label for="fname">Last Name</label>
+                <input type="text" id="surname">
+                <br>
+                <label for="fname">Position</label>
+                <input type="text" id="position">
+                <br>
+                <label for="fname">Department</label>
+                <input type="text" id="department">
+                <br>
+                <label for="fname">Email</label>
+                <input type="text" id="email">
+                <br>
+                <label for="fname">Salery</label>
+                <input type="text" id="salery">
+                <br>
+                <button id="confirm-btn" type="button" onclick="addEmployee()">Confirm</button>
+                <button id="cancel-btn" type="button" onclick="removeEmployeeModel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="model" id="interview-model">
+        <div class="model-container">
+            <header class="model-header">
+                <div class="model-header-content">
+                    <span>Add Interview</span>
+                </div>
+            </header>
+            <div class="model-content">
+                <label for="fname">Department</label>
+                <input type="text" id="int-department">
+                <br>
+                <label for="fname">Position</label>
+                <input type="text" id="int-position">
+                <br>
+
+                <button id="confirmInt-btn" type="button" onclick="addInterview()">Confirm</button>
+                <button id="cancelInt-btn" type="button" onclick="removeInterviewModel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="add-buttons">
+        <button class="btn" type="button" onclick="showAddIntModel()">Add Interview</button>
+        <button class="btn" type="button" onclick="showAddEmpModel()">Add Employee</button>
+    </div>
+
+    <!-- FOOTER  -->
+
+    <div class="footer-container">
+        <footer>
+            <ul class="footer-list">
+                <li>HR System</li>
+                <li>About</li>
+                <li>FAQs</li>
+                <li>Developer</li>
+                <li>&copy; 2021</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>
