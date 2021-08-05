@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- MAIN NAV -->
+    <div class="nav-container">
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-items"><a href="#">Home</a></li>
+                <li class="nav-items work-dropdown" onclick="dropdownFunction('work-dropdown-content')">
+                    <a href="#">Work</a>
+                    <div class="work-dropdown-content" id="work-dropdown-content">
+                        <a href="#">Work before College</a>
+                        <a href="#">Work during College</a>
+                        <a href="#">Work after College</a>
+                    </div>
+                </li>
+                <li class="nav-items"><a href="#">Games</a></li>
+                <li class="nav-items"><a href="#">Qualifications</a></li>
+                <li class="nav-items"><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="nav-items-dropdown" onclick="showContent('nav-list')">&equiv;</button>
+        </nav>
+    </div>
+
+    <!-- SIDE NAV -->
+    <div class="sideNav-container">
+        <nav>
+            <ul class="sideNav-list">
+                <li class="sideNav-items"><a class="sideNav-home" href="#">H</a></li>
+                <li class="sideNav-items"><a class="sideNav-work" href="#">W</a></li>
+                <li class="sideNav-items"><a class="sideNav-game" href="#">G</a></li>
+                <li class="sideNav-items"><a class="sideNav-qualifications" href="#">Q</a></li>
+                <li class="sideNav-items"><a class="sideNav-contact" href="contact.html">C</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="form-container">
+        <h1>Contact</h1>
+        <form action="inc/mail.inc.php" method="POST">
+            <input type="text" name="name" placeholder="Name"><br>
+            <input type="email" name="email" placeholder="Email"><br>
+            <textarea name="message" id="message" rows="6" placeholder="Write your message here"></textarea><br>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
