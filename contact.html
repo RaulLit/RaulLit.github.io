@@ -46,11 +46,22 @@
     <div class="form-container">
         <h1>Contact</h1>
         <form action="" method="POST">
-            <input type="text" name="name" placeholder="Name"><br>
-            <input type="email" name="email" placeholder="Email"><br>
+            <input id="name" type="text" name="name" placeholder="Name"><br>
+            <input id="email" type="email" name="email" placeholder="Email"><br>
             <textarea name="message" id="message" rows="6" placeholder="Write your message here"></textarea><br>
-            <input type="submit">
+            <input id="submit-btn" type="submit" onclick="clearfields()">
         </form>
     </div>
 </body>
+<script>
+const name = document.querySelector('#name');
+const email = document.querySelector('#email');
+const message = document.querySelector('#message');
+
+function clearfields() {
+    name.value = '';
+    email.value = '';
+    message.value = '';
+}
+</script>
 </html>
