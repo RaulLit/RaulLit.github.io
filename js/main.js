@@ -22,6 +22,20 @@ function ready() {
     }, sideNavOptions);
     sideNavObserver.observe(mainNavContainer);
 }
+function closeTabWhenClickedOutside(_container) {
+    // var container = document.getElementById(_container);
+    var firstClick = true;
+    window.onclick = (event) => {
+        if(!event.target.matches('.work-dropdown-content')) {
+            if(document.getElementById(_container).classList.contains('show-nav-dropdown')){
+                if(firstClick == false) {
+                    hideDropdownContent(_container);
+                }
+            }
+            firstClick = false;
+        }
+    }
+}
 
 
 // NAV DROPDOWN FUNCTIONALITY
@@ -32,6 +46,7 @@ function dropdownFunction(_dropdownContentContainer) {
     } else{
         showDropdownContent(_dropdownContentContainer);
     }
+    closeTabWhenClickedOutside(_dropdownContentContainer);
 }
 function showContent(_content) {
     var container = document.getElementById(_content);
