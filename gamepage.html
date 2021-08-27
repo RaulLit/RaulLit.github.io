@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page | Play the game you like ;)</title>
+    <link rel="icon" href="img/title-img.png" type="image">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gamepage.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <!-- MAIN NAV -->
+    <div class="nav-container">
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-items"><a href="index.html">Home</a></li>
+                <li class="nav-items work-dropdown" onclick="dropdownFunction('work-dropdown-content')">
+                    <a href="#">Work</a>
+                    <div class="work-dropdown-content" id="work-dropdown-content">
+                        <a href="#">Work before College</a>
+                        <a href="#">Work during College</a>
+                        <a href="#">Work after College</a>
+                    </div>
+                </li>
+                <li class="nav-items"><a href="gamepage.html">Games</a></li>
+                <li class="nav-items"><a href="#">Qualifications</a></li>
+                <li class="nav-items"><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="nav-items-dropdown" onclick="showContent('nav-list')">&equiv;</button>
+        </nav>
+    </div>
+
+    <!-- SIDE NAV -->
+    <div class="sideNav-container">
+        <nav>
+            <ul class="sideNav-list">
+                <li class="sideNav-items"><a class="sideNav-home" href="#">H</a></li>
+                <li class="sideNav-items"><a class="sideNav-work" href="#">W</a></li>
+                <li class="sideNav-items"><a class="sideNav-game" href="#">G</a></li>
+                <li class="sideNav-items"><a class="sideNav-qualifications" href="#">Q</a></li>
+                <li class="sideNav-items"><a class="sideNav-contact" href="contact.html">C</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="header"><h1>Web Games</h1></div>
+
+    <div class="game-container">
+        <div class="gamebox">
+            <div class="gamebox-content">
+                <a href="../Games/Game 1/index.html">
+                    <img src="img/Game preview/meteor-strike.jpg" height="200rem" alt="Game Preview">
+                    <p>Meteor Strike</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
