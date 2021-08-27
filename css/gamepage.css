@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    text-align: center;
+    margin: 1rem 0;
+}
+.header h1{
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.gamebox{
+    margin: 10px auto;
+    flex: 30%;
+}
+.game-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gamebox-content{
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 19rem;
+    margin: 0 auto;
+    background-color: var(--button-color);
+}
+.gamebox-content img {
+    border-radius: 10px;
+    margin: 4px;
+}
+.gamebox-content p {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.gamebox-content a{
+    text-decoration: none;
+}
