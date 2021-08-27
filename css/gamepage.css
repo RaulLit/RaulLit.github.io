@@ -10,6 +10,7 @@
 .header h1{
     font-size: 2.5rem;
     font-family: 'Courier New', Courier, monospace;
+    user-select: none;
 }
 .gamebox{
     margin: 10px auto;
@@ -23,13 +24,14 @@
     text-align: center;
     border: 1px solid #333;
     border-radius: 10px;
-    width: 19rem;
+    max-width: 20rem;
     margin: 0 auto;
     background-color: var(--button-color);
+    padding: 5px;
 }
 .gamebox-content img {
     border-radius: 10px;
-    margin: 4px;
+    max-width: 100%;
 }
 .gamebox-content p {
     font-family: 'Courier New', Courier, monospace;
