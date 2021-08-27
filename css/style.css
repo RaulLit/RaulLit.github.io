@@ -24,7 +24,6 @@ body{
     list-style: none;
     padding: 0px 50px;
     text-align: center;
-    animation: slideRight 0.8s forwards ease-in;
 }
 .nav-items{
     display: inline-block;
@@ -43,13 +42,6 @@ body{
 }
 #nav-items-dropdown{
     display: none;
-}
-
-@keyframes slideRight {
-    from {
-        padding-left: 0;
-        opacity: 0;
-    }
 }
 
 /* WORK DROPDOWN */
