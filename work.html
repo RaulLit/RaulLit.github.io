@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <link rel="stylesheet" href="css/work.css">
+    <script defer src="js/work.js"></script>
+</head>
+<body>
+    <!-- STATIC NAV  -->
+    <div class="static-nav-wrapper">
+        <ul class="static-nav-list">
+            <li class="static-nav-items home"><a href="index.html">Home</a></li>
+            <li class="static-nav-items work"><a href="work.html">Work</a></li>
+            <li class="static-nav-items contact"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <!-- POPUP NAV  -->
+    <div class="pop-nav-wrapper">
+        <ul class="pop-nav-list">
+            <li class="pop-nav-items home"><a href="index.html">Home</a></li>
+            <li class="pop-nav-items work"><a href="work.html">Work</a></li>
+            <li class="pop-nav-items contact"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- CAROUSEL  -->
+    <div class="work-carousel">
+        <div class="work-slides fade">
+            <a href="gamepage.html">
+                <img src="img/Game preview/meteor-strike.jpg" width="400px" alt="game-preview">
+                <div class="details">
+                    <h1>Games</h1>
+                    <p>Play the games you like</p>
+                </div>
+            </a>
+        </div>
+        <div class="work-slides fade">
+            <a href="sitepage.html">
+                <img src="img/Game preview/meteor-strike.jpg" width="400px" alt="demo-sites">
+                <div class="details">
+                    <h1>Demo Sites</h1>
+                    <p>From ecommerce to portfolio sites, explore all</p>
+                </div>
+            </a>
+        </div>
+        <div class="work-slides fade">
+            <a href="animations.html">
+                <img src="img/Game preview/meteor-strike.jpg" width="400px" alt="animation/effects">
+                <div class="details">
+                    <h1>Animations</h1>
+                    <p>Amazing Animations and effects that you can integrate into your websites</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- NEXT PREV BUTTONS  -->
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+
+        <div class="dots-container">
+            <div class="dots fade" onclick="moveDot(1)"></div>
+            <div class="dots fade" onclick="moveDot(2)"></div>
+            <div class="dots fade" onclick="moveDot(3)"></div>
+        </div>
+    </div>
+
+
+    <div class="heading-title">
+        <h1>On going projects..</h1>
+    </div>
+    <div class="projects-container">
+
+    </div>
+</body>
+</html>

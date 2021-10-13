@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <!-- STATIC NAV  -->
+    <div class="static-nav-wrapper">
+        <ul class="static-nav-list">
+            <li class="static-nav-items home"><a href="index.html">Home</a></li>
+            <li class="static-nav-items work"><a href="work.html">Work</a></li>
+            <li class="static-nav-items contact"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <!-- POPUP NAV  -->
+    <div class="pop-nav-wrapper">
+        <ul class="pop-nav-list">
+            <li class="pop-nav-items home"><a href="index.html">Home</a></li>
+            <li class="pop-nav-items work"><a href="work.html">Work</a></li>
+            <li class="pop-nav-items contact"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- FORM  -->
+    <div class="form-container">
+        <h1>Contact Me</h1>
+        <form action="" method="POST">
+            <input class="fields" id="name" type="text" name="name" placeholder="Name"><br>
+            <input class="fields" id="email" type="email" name="email" placeholder="Email"><br>
+            <textarea name="message" class="fields" id="message" rows="6" placeholder="Write your message here"></textarea><br>
+            <input id="submit-btn" type="submit" onclick="clearfields()">
+        </form>
+    </div>
+</body>
+<script>
+    const name = document.querySelector('#name');
+    const email = document.querySelector('#email');
+    const message = document.querySelector('#message');
+
+    function clearfields() {
+        name.value = '';
+        email.value = '';
+        message.value = '';
+    }
+</script>
+</html>
