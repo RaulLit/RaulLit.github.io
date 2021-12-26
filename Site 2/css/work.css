@@ -115,9 +115,11 @@
     border: 1px solid #333;
     border-radius: 10px;
     max-width: 20rem;
+    min-height: 13rem;
     margin: 0 auto;
     background-color: var(--sky-blue);
     padding: 5px;
+    box-shadow: 0 0 20px 2px gray;
 }
 .projectbox-content img {
     border-radius: 10px;
@@ -136,5 +138,13 @@
 }
 .projectbox-content:nth-child(1) {
     background: black;
+    color: white;
+}
+
+.projectbox-content span {
+    border-radius: 10px;
+    max-width: 100%;
+    padding: 0 30%;
+    font-size: 8rem;
     color: white;
 }
